@@ -72,16 +72,17 @@ static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() 
 static const char *dmenucmd[]= { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, "-nb", normbgcolor, "-nf", normfgcolor, "-sb", selbordercolor, "-sf", selfgcolor, NULL };
 static const char *termcmd[] = { "st", NULL };
 
-static const char *upvol[]   = { "pactl", "set-sink-volume", "@DEFAULT_SINK@", "+5%",     NULL };
-static const char *downvol[] = { "pactl", "set-sink-volume", "@DEFAULT_SINK@", "-5%",     NULL };
-static const char *mutevol[] = { "pactl", "set-sink-mute",   "@DEFAULT_SINK@", "toggle",  NULL };
+static const char *upvol[]   = { "sh", "/home/enzo/.btndo.sh", "vol", "up", NULL };
+static const char *downvol[] = { "sh", "/home/enzo/.btndo.sh", "vol", "down", NULL };
+static const char *mutevol[] = { "sh", "/home/enzo/.btndo.sh", "vol", "mute", NULL };
 
-static const char *uplight[] = { "sudo", "light", "-A", "5",     NULL };
-static const char *downlig[] = { "sudo", "light", "-U", "5",     NULL };
+static const char *uplight[] = { "sh", "/home/enzo/.btndo.sh", "light", "up", NULL };
+static const char *downlig[] = { "sh", "/home/enzo/.btndo.sh", "light", "down", NULL };
+
 
 static const char *shutcmd[] = {"sudo","poweroff",NULL};
 
-static const char *btndo[] = {"sh","/home/enzo/.btndo.sh",NULL};
+static const char *btndo[] = {"sh","/home/enzo/.btndo.sh", "thinkvantage", NULL};
 static const char *nextBG[] = {"sh","/home/enzo/.fehbg",NULL};
 
 
