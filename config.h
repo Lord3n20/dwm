@@ -84,7 +84,7 @@ static const char *shutcmd[] = {"sudo","poweroff",NULL};
 
 static const char *btndo[] = {"sh","/home/enzo/.btndo.sh", "thinkvantage", NULL};
 static const char *nextBG[] = {"sh","/home/enzo/.fehbg",NULL};
-
+static const char *plainBG[] = {"xsetroot","-solid","#000000",NULL};
 
 static const Key keys[] = {
 	/* modifier                     key        function        argument */
@@ -117,6 +117,7 @@ static const Key keys[] = {
 	{ MODKEY,                       XK_x,      quit,           {0} },
 	{ MODKEY,                       XK_y,      spawn,          {.v = shutcmd } },
 	{ MODKEY,                       XK_n,      spawn,          {.v = nextBG } },
+	{ MODKEY,                       XK_p,      spawn,          {.v = plainBG } },
 	{ 0,                            XF86XK_Launch1, spawn,     {.v = btndo } },
 	{ MODKEY,                       XK_r,      xrdb,           {.v = NULL } },
 };
