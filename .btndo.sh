@@ -24,4 +24,6 @@ elif [ $1 = "playback" ]; then
   elif [[ $2 = "skip" ]]; then
     playerctl next
   fi
+elif [ $1 = "lock" ]; then
+  betterlock -l
 fi
