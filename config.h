@@ -81,6 +81,7 @@ static const char *mutemic[] = { "sh", "/home/enzo/.btndo.sh", "mic", "mute", NU
 static const char *uplight[] = { "sh", "/home/enzo/.btndo.sh", "light", "up", NULL };
 static const char *downlig[] = { "sh", "/home/enzo/.btndo.sh", "light", "down", NULL };
 static const char *flame[] = { "sh", "/home/enzo/.btndo.sh", "screen", NULL };
+static const char *lock[] = { "sh", "/home/enzo/.btndo.sh", "lock", NULL };
 static const char *bgrel[] = { "sh", "/home/enzo/.btndo.sh", "reloadbg", NULL };
 static const char *playback[] = { "sh", "/home/enzo/.btndo.sh", "playback", "toggle", NULL };
 static const char *playbackP[] = { "sh", "/home/enzo/.btndo.sh", "playback", "again", NULL };
@@ -120,6 +121,7 @@ static const Key keys[] = {
 	{ MODKEY,                       XK_x,      quit,           {0} },
 	{ MODKEY,                       XK_y,      spawn,          {.v = shutcmd } },
 	{ MODKEY,                       XK_f,      spawn,          {.v = flame } },
+	{ MODKEY,                       XK_l,      spawn,          {.v = lock } },
 	{ MODKEY,                       XK_r,      spawn,          {.v = bgrel } },
 	{ MODKEY,                       XF86XK_AudioLowerVolume,   spawn, {.v = playbackP } },
 	{ MODKEY,                       XF86XK_AudioMute,          spawn, {.v = playback } },
